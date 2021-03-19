@@ -2,7 +2,7 @@ package hw02;
 
 import java.util.Scanner;
 
-public class SecondTask {
+public class HomeWork02 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         while (true) {

@@ -1,6 +1,6 @@
 package hw01;
 
-public class FirstTask {
+public class HomeWork01 {
     public static void main(String[] args) {
 
 //        Первая часть задания - тернарный оператор
