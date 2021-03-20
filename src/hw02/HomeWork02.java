@@ -26,7 +26,7 @@ public class HomeWork02 {
                             System.out.println("Отлично!");
                         }
                     } else {
-                        System.out.println("Количество верный ответов должно быть от 0 до 100!");
+                        System.out.println("Количество верных ответов должно быть от 0 до 100!");
                     }
                     break;
                 case 2:
@@ -64,7 +64,7 @@ public class HomeWork02 {
                         System.out.println("Мало тарелок!");
                         break;
                     }
-                    if (tablet <= 0) {
+                    if (tablet < 0.5) {
                         System.out.println("Мало моющего средства!");
                         break;
                     }
