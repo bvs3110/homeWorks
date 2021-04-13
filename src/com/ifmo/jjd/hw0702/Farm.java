@@ -1,2 +1,4 @@
-package com.ifmo.jjd.hw0702;public class Farm {
+package com.ifmo.jjd.hw0702;
+
+public class Farm {
 }

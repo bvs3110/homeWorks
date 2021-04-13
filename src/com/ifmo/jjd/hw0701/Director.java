@@ -1,4 +1,4 @@
-package com.ifmo.jjd.hw07;
+package com.ifmo.jjd.hw0701;
 
 public class Director extends People{
     public Director(String name, int age) {
@@ -14,5 +14,13 @@ public class Director extends People{
         if (school == null || school.getDirector() != this) return false;
         school.setLessonsStart(false);
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Director{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

@@ -1,4 +1,6 @@
-package com.ifmo.jjd.hw07;
+package com.ifmo.jjd.hw0701;
+
+import java.util.Arrays;
 
 public class School {
     final private String name;
@@ -13,9 +15,9 @@ public class School {
         if (director == null) throw new IllegalArgumentException("Не назначен директор!");
         this.director = director;
         if (teachers == null) throw new IllegalArgumentException("Нет учителей!");
-        this.teachers = teachers;
+        this.teachers = teachers.clone();
         if (schoolchilds == null) throw new IllegalArgumentException("Нет учеников!");
-        this.schoolchilds = schoolchilds;
+        this.schoolchilds = schoolchilds.clone();
     }
 
     public String getName() {
@@ -46,9 +48,20 @@ public class School {
         director.StartLessons(this);
         for (Teacher teacher : teachers) {
             for (Schoolchild schoolchild : schoolchilds) {
-                teacher.teach(schoolchild);
+                schoolchild.learn(teacher);
             }
         }
         director.StopLessons(this);
+    }
+
+    @Override
+    public String toString() {
+        return "School{" +
+                "name='" + name + '\'' +
+                ", director=" + director +
+                ", teachers=" + Arrays.toString(teachers) +
+                ", schoolchilds=" + Arrays.toString(schoolchilds) +
+                ", isLessonsStart=" + isLessonsStart +
+                '}';
     }
 }

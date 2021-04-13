@@ -1,6 +1,6 @@
-package com.ifmo.jjd.hw07;
+package com.ifmo.jjd.hw0701;
 
-public class Teacher extends People{
+public class Teacher extends People implements Teach{
     final private String subject;
     private int efficiency;
 
@@ -20,10 +20,19 @@ public class Teacher extends People{
         return efficiency;
     }
 
-    public boolean teach(Schoolchild schoolchild) {
-        if (schoolchild == null || schoolchild.getSubject().equals(subject)) return false;
-        schoolchild.addKnowledge(efficiency);
-        return true;
+    @Override
+    public void teach(Schoolchild schoolchild) {
+        if (schoolchild == null) return;
+        schoolchild.learn(this);
     }
 
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", subject='" + subject + '\'' +
+                ", efficiency=" + efficiency +
+                '}';
+    }
 }

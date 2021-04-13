@@ -1,4 +1,4 @@
-package com.ifmo.jjd.hw07;
+package com.ifmo.jjd.hw0701;
 
 abstract public class People {
     protected String name;

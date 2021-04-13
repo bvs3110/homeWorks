@@ -1,6 +1,6 @@
-package com.ifmo.jjd.hw07;
+package com.ifmo.jjd.hw0701;
 
-public class Schoolchild extends People {
+public class Schoolchild extends People implements Learn{
     final private String subject;
     private int knowledge;
 
@@ -16,12 +16,28 @@ public class Schoolchild extends People {
         return subject;
     }
 
+    public void addKnowledge(int knowledge) {
+        if (knowledge < 0) throw new IllegalArgumentException("Уровень интеллекта не для школы!");
+        this.knowledge += knowledge;
+    }
+
     public int getKnowledge() {
         return knowledge;
     }
 
-    public void addKnowledge(int knowledge) {
-        if (knowledge < 0) throw new IllegalArgumentException("Знания не могут быть отрицательными!");
-        this.knowledge += knowledge;
+    @Override
+    public void learn(Teacher teacher) {
+        if (teacher == null) return;
+        if (teacher.getSubject().equals(subject)) knowledge += teacher.getEfficiency();
+    }
+
+    @Override
+    public String toString() {
+        return "Schoolchild{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", subject='" + subject + '\'' +
+                ", knowledge=" + knowledge +
+                '}';
     }
 }
