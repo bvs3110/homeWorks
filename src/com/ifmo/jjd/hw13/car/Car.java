@@ -1,4 +1,4 @@
-package com.profi.jjd.lesson13.hw.car;
+package com.ifmo.jjd.hw13.car;
 
 public class Car {
     private String color;

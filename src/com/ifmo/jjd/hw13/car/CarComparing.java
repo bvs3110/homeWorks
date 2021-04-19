@@ -1,4 +1,4 @@
-package com.profi.jjd.lesson13.hw.car;
+package com.ifmo.jjd.hw13.car;
 
 import java.util.Collections;
 

@@ -8,7 +8,7 @@ public class MessageTask {
         //  Ответ в консоль
         int[] msgCount = new int[Message.MessagePriority.values().length];
         for (Message message : messageList) {
-            msgCount[message.getPriority().ordinal()] ++;
+            msgCount[message.getPriority().ordinal()]++;
         }
         for (int i = 0; i < msgCount.length; i++) {
             System.out.println("Кол-во сообщений для приоритета " + Message.MessagePriority.getPriority(i) + " равно " + msgCount[i]);
@@ -26,6 +26,12 @@ public class MessageTask {
             System.out.println("Количество сообщений для кода " + i + " равно " + msgCount[i]);
         }
     }
+    public static void countMapEachCode(List<Message> messageList) {
+        HashMap<Integer, Integer> myMap = new HashMap<>();
+        for (Message message : messageList) {
+            myMap.put(message.getCode(),myMap.getOrDefault(message.getCode(),0) + 1);
+        }
+    }
 
     public static void uniqueMessageCount(List<Message> messageList) {
         // TODO: Подсчитать количество уникальных сообщений
@@ -33,6 +39,8 @@ public class MessageTask {
         HashSet<Message> original = new HashSet<>(messageList);
         System.out.println("Количество оригинальных сообщений " + original.size());
     }
+
+
 
     public static List<Message> uniqueMessagesInOriginalOrder(List<Message> messageList) {
         // TODO: вернуть только неповторяющиеся сообщения и в том порядке,
