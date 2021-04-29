@@ -18,7 +18,7 @@ public class MapTask {
 
         String city = "Тверь";
 
-        System.out.println(loginInCity(firstTaskMap, city));
+        //System.out.println(loginInCity(firstTaskMap, city));
 
 
         // TODO:: дан список слов (например, words).
@@ -77,14 +77,16 @@ public class MapTask {
         alphabetStat(text);
 
     }
-    public static List<String> loginInCity(HashMap<String, String> firstTaskMap, String citi ){
+  /*  public static List<String> loginInCity(HashMap<String, String> firstTaskMap, String citi ){
         List<String> inCity = new ArrayList<>();
         for (Map.Entry<String, String> stringStringEntry : firstTaskMap.entrySet()) {
             if (stringStringEntry.getValue().equals(citi)) inCity.add(stringStringEntry.getKey());
         }
         return inCity;
-    }
+    }*/
 
+    //  1. написать метод, принимающий на вход слово и возвращающий частоту
+    //  встречаемости данного слова в тексте
     public static Map<String, Integer> equalWords(List<String> words){
         Map<String, Integer> wordsCount = new HashMap<>();
         for (String word : words) {
