@@ -22,8 +22,8 @@ public class AnnotationApp {
                 Field[] fields = pointClass.getDeclaredFields();
                 for (Field field : fields) {
                     if(field.isAnnotationPresent(Required.class)){
-                        Method method = pointClass.getDeclaredMethod("set"+field.getName().toUpperCase(), int.class);
-                        method.invoke(point, Integer.parseInt(properties.getProperty(field.getName())));
+                        Method method = pointClass.getDeclaredMethod("set"+field.getName().toUpperCase(), field.getClass());
+                        method.invoke(point, Integer.parseInt((String)properties.getProperty(field.getName()))); //Проверить тип поля и парсить в этот тип
                     }
                 }
                 toString(point);
