@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DipLom</title>
+    <style>
+        table {
+            font-family: monospace;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+<H1 ALIGN=CENTER>Дипломная работа</H1>
+<H2 ALIGN=CENTER>База данных соответствия артикулов, размеров и кодов маркировки обуви</H2>
+<input id="codes_code" placeholder="По маркировке">
+<button onclick="findByCode()">По коду</button>
+<input id="codes_art" placeholder="По артикулу">
+<button onclick="findByArt()">По арт.</button>
+<input id="codes_arts" placeholder="По артикулу и размеру">
+<input id="codes_size" placeholder="По артикулу и размеру">
+<button onclick="findByArtSize()">По арт. p-p</button>
+<table id="codesList" >
+</table>
+</body>
+<script src="js/script.js"></script>
+</html>
